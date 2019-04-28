@@ -1,0 +1,291 @@
+{ 
+"tests":[
+	{
+		"description":"用例1",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "US",
+			"account_name": "ac",
+			"account_number": "1",
+			"aba": "12345678A"
+		},
+		"response":{
+			"statusCode": 200
+		}
+	},
+	{
+		"description":"用例2",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "AU",
+			"account_name": "acname1234",
+			"account_number": "123456",
+			"swift_code": "ABCDAUGH",
+			"bsb": "12345B"
+		},
+		"response":{
+			"statusCode": 200
+		}
+	},
+	{
+		"description":"用例3",
+		"info":{
+			"payment_method": "SWIFT",     
+            "bank_country_code": "CN",
+			"account_name": "acname1",
+			"account_number": "12345678", 
+			"swift_code": "ABCDCNGH"
+		},
+		"response":{
+			"statusCode": 200
+		}
+	},
+	{
+		"description":"用例4",
+		"info":{
+			"payment_method": "UNKNOW", 
+            "bank_country_code": "US",       
+			"account_name": "acname1",
+			"account_number": "123",  
+			"aba": "12345678A"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例5",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "CO", 
+			"account_name": "123456",  
+			"account_number": "12345678"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例6",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "CN",
+			"account_name": "a", 	
+			"account_number": "12345678"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例7",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "US",
+			"account_name": "acname12345", 
+			"account_number": "123",
+			"aba": "12345678A"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例8",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "US",
+			"account_name": "acname1",
+			"account_number":"",           
+			"aba": "12345678A"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例9",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "US",
+			"account_name": "acname1",
+			"account_number": "123456789123456789",     
+			"aba": "12345678A"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例10",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "US",
+			"account_name": "acname1",
+			"account_number": "12345678912345678",      
+			"swift_code": "ABCDUSGH",
+			"aba": "12345678A"
+		},
+		"response":{
+			"statusCode":200
+		}
+	},
+	{
+		"description":"用例11",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "AU",
+			"account_name": "acname1234",
+			"account_number": "123456789", 
+			"swift_code": "ABCDAUGH",
+			"bsb": "12345B"
+		},
+		"response":{
+			"statusCode": 200
+		}
+	},
+	{
+		"description":"用例12",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "AU",
+			"account_name": "acname1234",
+			"account_number": "1234567890",  
+			"swift_code": "ABCDAUGH",
+			"bsb": "12345B"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例13",
+		"info":{
+			"payment_method": "LOCAL",
+			"bank_country_code": "AU",
+			"account_name": "acname1234",
+			"account_number": "12345",
+			"bsb": "12345B"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例14",
+		"info":{
+			"payment_method": "LOCAL",
+			"bank_country_code": "CN",
+			"account_name": "acname1234",
+			"account_number": "12345678"
+		},
+		"response":{
+			"statusCode": 200
+		}
+	},
+	{
+		"description":"用例15",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "CN",
+			"account_name": "acname1234",
+			"account_number": "12345678912345678912"
+		},
+		"response":{
+			"statusCode": 200
+		}
+	},
+	{
+		"description":"用例16",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "CN",
+			"account_name": "acname1234",
+			"account_number": "123456789123456789123" 
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例17",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "CN",
+			"account_name": "acname1234",
+			"account_number": "1234567", 
+			"swift_code": "ABCDCNGH"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例18",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "US",
+			"account_name": "acname1",
+			"account_number": "12345678912345678",      
+			"swift_code": "ABCDUSGH"
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例19",
+		"info":{
+			"payment_method": "LOCAL",
+            "bank_country_code": "US",
+			"account_name": "acname1",
+			"account_number": "12345678912345678",      
+			"aba": "12345678"      
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例20",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "AU",
+			"account_name": "acname1234",
+			"account_number": "123456789", 
+			"swift_code": "ABCDAUGH"      
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例21",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "AU",
+			"account_name": "acname1234",
+			"account_number": "123456789", 
+			"swift_code": "ABCDAUGH",   
+			"bsb": "12345"   
+		},
+		"response":{
+			"statusCode": 400
+		}
+	},
+	{
+		"description":"用例22",
+		"info":{
+			"payment_method": "SWIFT",
+            "bank_country_code": "AU",
+			"account_name": "acname1234",
+			"account_number": "123456789", 
+			"swift_code": "ABCDUSGH",
+			"bsb": "123456"    
+		},
+		"response":{
+			"statusCode": 400
+		}
+	}
+]
+}
